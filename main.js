@@ -11,7 +11,7 @@ $(document).ready(function(){
     text.justification='center';
     text.fillColor='white';
     text.fontSize=20;
-    text.content='hello world!'
+    text.content='Hello world!'
 
     var tool=new Tool();
     tool.onMouseDown=function(event){
