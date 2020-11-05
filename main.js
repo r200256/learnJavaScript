@@ -1,11 +1,105 @@
-function addPrefix(prefix,...words){
-    const prefixedWords=[];
-    for (let i=0;i<words.length;i++){
-        prefixedWords[i]=prefix+words[i];
-    }
-    return prefixedWords;
-}
-addPrefix("con","verse","vex")
+
+//str 140
+
+// const f1=function(){return "Hello!"};
+
+// const f11=()=>"hello";
+
+// const f2=function (name){return `Hello, ${name}!`}
+// const f22=name=>`Hello, ${name}!`
+
+// const f3=(a,b)=>a+b;
+
+// const g=function f(stop){
+//     if(stop){console.log("f Остановленно")};
+//     f(true);
+// };
+// g(false);
+
+//self
+
+// const o={
+//     name:"Nemo ZXC-VB-N",
+//     greetBackwards: function(){
+//         const self1=this;
+//         function getReverseName(){
+//             let nameBackwards="";
+//             for(let i=self1.name.length-1;i>=0;i--){
+//                 nameBackwards+=self1.name[i];
+//             }
+//             return nameBackwards;
+//         }
+//         return`${getReverseName()} --- reverse Name`;
+//     },
+// }
+// console.log(o.greetBackwards());
+
+// const o={
+//     name:'Julie',
+//     greetBackwards: function(){
+//         function getReverseName(){
+//             let nameBackwards="";
+//             for (let i=this.name.length-1;i>=0;i--){
+//                 nameBackwards+=this.name[i];
+//             }
+//             return nameBackwards;
+//         }
+//         return `${getReverseName()} si eman ym, olleH`
+//     }
+// };
+// console.log(o.greetBackwards());
+
+// console.log(getReverseName())
+
+// const oo={
+//     name:"Wallace",
+//     foo(){console.log(this)},
+//     speak(){return `Имя свойятва ${this.name}`}
+// }
+// console.log(oo.speak())
+// console.log(oo.foo())
+
+// a=`${o.name} --> ${o.speak()}`
+// console.log(a)
+
+// const o={
+//     name:console.log("Wallace"),
+//     // bark: function (){return console.log("Woof!")}
+//     bark(){console.log("Opan-ki")}
+// }
+// o.name;
+// o.bark();
+
+// function f(a,b="def123",c=5){
+//     console.log(`${a} - ${b} - ${c}`)
+// }
+// f();
+// f(7,8,9);
+// f("a","sd")
+
+// function addPrefix(...words){
+//     const prefixeWords=[];
+//     for(let i=0;i<words.length;i++){
+//         prefixeWords[i]=words[i];
+//     }
+//     return prefixeWords
+// }
+// console.log(addPrefix("asd","zxc","qwe","rty","fgh"))
+
+// function addPrefix(prefix,...words){
+//     const prefixedWords=[];
+//     for (let i=0;i<words.length;i++){
+//         prefixedWords[i]=prefix+words[i];
+//     }
+//     return prefixedWords;
+// }
+// addPrefix("con","verse","vex")
+
+// function getSentence([subject,verb,object]){
+//     return `${subject} - ${verb} - ${object}`
+// }
+// const arr=["I","love","JavaScript"];
+// console.log(getSentence(arr))
 
 // function getSentence({subject,verb,object}){
 //     return`${subject} ${verb} ${object}`;
@@ -15,7 +109,7 @@ addPrefix("con","verse","vex")
 //     verb:"Love ",
 //     object:"JavaScript"
 // }
-// getSentence(o);
+// console.log(getSentence(o));
 
 // function f(x){
 //     return `Внутри f: x=${x}`;
