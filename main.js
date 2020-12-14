@@ -1,3 +1,163 @@
+const book = [
+    " Twinkle, twinkle, littlebat ! " ,
+    " How I wonder what you ' reat ! " ,
+    " Up above the world you fl y , " ,
+    " Like а tea tray in the sky . " ,
+    " Twinkl e , twinkle , little bat ! " ,
+    " How I wonder what you ' reat ! " ,
+    ] ;
+const it=book.values()
+const it1=book.values()
+console.log(it.next())
+console.log(it1.next())
+console.log(it1.next())
+console.log(it1.next())
+console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+// const stuff=' hight :=9\n' +' mediu: 5\n'+' l ow : 2\n';
+// const levels=stuff.match(/:\s*[0-9]/g);
+// console.log(levels)
+
+// // const input = "As I was going to Saint Ives"; 
+// const input = 'HTML @a @1 @12 with a123a aa1234 1 2 3 <а href= "/one" >one link</a>,Back Back Back Baweck Back Bac1212k Bac12k and some JavaScript . ' +' < script src= " stuff . j s " > < / script> HTML' ;
+// const re=/\w{3,}/ig
+// // result=input.match(re)
+// result=re.exec(/\w{3,}/ig)
+
+// console.log(re.exec(/\w{1,}/ig))
+// console.log(re.exec(/\w{2,}/ig))
+// console.log(re.exec(/\w{3,}/ig))
+
+// var myRe = /аб*/g;
+// var str = 'аббвгдеабж';
+// var myArray;
+// while ((myArray = myRe.exec(str)) !== null) {
+//   var msg = 'Найдено ' + myArray[0] + '. ';
+//   msg += 'Следующее сопоставление начнётся с позиции ' + myRe.lastIndex;
+//   console.log(msg);
+// }
+
+// const html = 'HTML @a @1 @12 with a123a aa1234 1 2 3 <а href= "/one" >one link</a>,Back Back Back Baweck Back Bac1212k Bac12k and some JavaScript . ' +' < script src= " stuff . j s " > < / script> HTML' ;
+// // const bc=html.match(/\w[0-9]+/ig);
+// // const bc=html.match(/\w[0-9][0-9][0-9]./);
+// const re=/(@[0-9]{5})/i;
+// console.log(re.exec(html));
+
+
+// const html =
+// ' <а class= "foo" href= "/foo" id= "foo">Foo< /a>\n <А href= " /foo "Class= "foo" >Foo</a> \ n  <а href= "/foo" >Foo</a>\n  <а onclick= " javascript : alert ( " foo!" ) " href= "/foo">Foo</a>';
+
+// function sanitizeATag (aTag) {
+//     // получить части дескриптора . . .
+//     const parts = aTag.match (/< a\s+(.*?)>(.*?)<\/a>/i);
+//     // parts [ 1 ] - а трибуты открывающего дескриптора <а>
+//     // parts [2] - то, что между дескрипторами <а> и </а >
+//     const attributes = parts[1]
+//     // теперь разделяем на отдельные а трибуты
+//     .split(/\s+/);
+//     return '<а' + attributes
+//     // мы хотим только атрибуты cla s s , id и href
+//     .filter ( attr => /^(?:classl|id|href)[\s=]/i.test(attr))
+//     // соединить через пробел
+//     . join (' ')
+//     // закрыть открытый дескриптор <а>
+//     + '>'
+//     // добавить содержимое
+//     + parts [ 2 ]
+//     // и завершающий дескриптор
+//     + ' < / а> ' ;
+// }
+
+// const beer99 = " 9 9 b o t t l e s of beer on the wall " +
+// " t a ke 1 down and p a s s i t around -- " +
+// " 9 8 b o t t l e s o f beer on the wall . x" ;
+// // const matches=beer99.match(/0|1|2|3|4|5|6|7|8|9/g)
+// // const matches=beer99.match(/[0-9]/g)
+// const matches=beer99.match(/[^\-0-9x-z.]/g)
+// console.log(matches)
+
+// const html='<br> [!CDATA[[<br>]]]'
+// const matches=html.match(/<br>/ig)
+// console.log(matches)
+
+
+// const html = ' HTML with <а href= "/one" >one link</a>, and some JavaScript . ' +' < script src= " stuff . j s " > < / script> ' ;
+// const matches=html.match(/<area|<a|<link|<script|source/ig)
+// console.log(matches)
+
+// const input ="As I was going to Saint Ives"
+// const re=/\w{3,}/ig //трехбукыенные слова и более
+// console.log(input.match(re))
+// console.log(input.search(re))
+
+
+// console.log(input.startsWith("As"))
+// console.log(input.startsWith("as"))
+// console.log(input.endsWith("going",14))
+
+// const dates=[]
+// const min=new Date(2000,0,1).valueOf();
+// const delta =new Date(2020,0,1,4,7,9).valueOf()-min ;
+// for (let i=0;i<10;i++){
+//     dates.push(new Date(min + delta*Math.random()));
+// }
+// dates.sort((a,b)=>b-a);
+// dates.forEach(element=>console.log(element))
+// // dates.sort((a,b)=>a-b)
+
+// const before={d: new Date()}
+// // before.d instanceof Date
+// const json= JSON.stringify(before)
+// const after=JSON.parse(json)
+// // after.d instanceof date
+// console.log(typeof after.d)
+
+// const amd=moment.tz([2016,3,27,9,19],'Amerika/Los_Angeles').toDate();
+// console.log(amd)
+
+
+// const SYM=Symbol();
+// const o={a:1,b:2,c:3,[SYM]:4}
+// // for (let prop in o){
+// //     if(!o.hasOwnProperty(prop)) continue;
+// //     console.log(`${prop}:${o[prop]}`)
+// // }
+
+// Object.keys(o).forEach(prop=>console.log(`${prop}:${o[prop]}`))
+
+// const bruce={name:"Bruce"};
+// const madeline={name:"Madeline"};
+// function greet(){
+//     return `Привет! Меня зовут ${this.name}!`;
+// }
+// console.log(greet());
+// console.log(greet.call(bruce))
+// console.log(greet.call(madeline))
+
+// function update(birthYear,occupation){
+//     this.birthYear=birthYear;
+//     this.occupation=occupation;
+// }
+
+// update.call(bruce,"dfdfd","dfdfd","1111111");
+
+// const o={
+//     name:"Julie",
+//     greetBackwards:function(){
+//         const getReverseName=()=>{
+//             let nameBackwards="";
+//             for(let i=this.name.length-1;i>=0;i--){
+//                 nameBackwards+=this.name[i];
+//             }
+//             return nameBackwards;
+//         };
+//         return `${getReverseName()} si eman`
+//     }
+// }
+// console.log(o.greetBackwards());
+
 
 //str 140
 
