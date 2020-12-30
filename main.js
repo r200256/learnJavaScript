@@ -1,20 +1,24 @@
-const book = [
-    " Twinkle, twinkle, littlebat ! " ,
-    " How I wonder what you ' reat ! " ,
-    " Up above the world you fl y , " ,
-    " Like а tea tray in the sky . " ,
-    " Twinkl e , twinkle , little bat ! " ,
-    " How I wonder what you ' reat ! " ,
-    ] ;
-const it=book.values()
-const it1=book.values()
-console.log(it.next())
-console.log(it1.next())
-console.log(it1.next())
-console.log(it1.next())
-console.log(it.next())
+const d=new Date();
+console.log(d);
+console.log(d.valueOf());
+
+// const book = [
+//     " Twinkle, twinkle, littlebat ! " ,
+    //     " How I wonder what you ' reat ! " ,
+//     " Up above the world you fl y , " ,
+//     " Like а tea tray in the sky . " ,
+//     " Twinkl e , twinkle , little bat ! " ,
+//     " How I wonder what you ' reat ! " ,
+//     ] ;
+// const it=book.values()
+// const it1=book.values()
 // console.log(it.next())
+// console.log(it1.next())
+// console.log(it1.next())
+// console.log(it1.next())
 // console.log(it.next())
+// // console.log(it.next())
+// // console.log(it.next())
 
 // const stuff=' hight :=9\n' +' mediu: 5\n'+' l ow : 2\n';
 // const levels=stuff.match(/:\s*[0-9]/g);
