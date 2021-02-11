@@ -9,7 +9,29 @@
 		<title>learnJavaScript</title>
 	</head>
 	<body>
-		
+		<div id="app-6">
+			<p>{{message}}</p>
+			<input type="text" v-model="message">
+		</div>
+		<div id="app-5">
+			<p>{{ message }}</p>
+			<button v-on:click="reverseMessage">Перевернуть сообщение</button>
+		</div>
+		<div id="app-4">
+			<ol>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ol>
+		</div>
+		<div id="app-3">
+			<span v-if="seen">VIDNO+++++++++++</span>
+		</div>
+		<div id="app-2">
+			<span v-bind:title="message">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti voluptatum quia velit quidem reprehenderit hic ratione repellat consequatur vel in.
+			</span>
+		</div>
 		<div id="app">
 			{{message}}
 		</div>
