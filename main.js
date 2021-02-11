@@ -1,10 +1,417 @@
-const d=new Date();
-console.log(d);
-console.log(d.valueOf());
+var appq= new Vue({
+    el:'#app',
+    data:{
+        message:'Привет, Vue!'
+    }
+})
+
+// class CoffeeMachine {
+//     _waterAmount = 0;
+  
+//     set waterAmount(value) {
+//       if (value < 0) throw new Error("Отрицательное количество воды");
+//       this._waterAmount = value;
+//     }
+  
+//     get waterAmount() {
+//       return this._waterAmount;
+//     }
+  
+//     constructor(power) {
+//       this._power = power;
+//     }
+  
+//   }
+  
+//   // создаём новую кофеварку
+//   let coffeeMachine = new CoffeeMachine(100);
+  
+//   // устанавливаем количество воды
+//   coffeeMachine.waterAmount = -10;
+
+// function ask(guestion,yes,no){
+//     if(guestion) yes()
+//     else no()
+// }
+// function showOk(){
+//     console.log("Вы согласны")
+// }
+// function showCancel(){
+//     console.log("Вы отменили выполнение")
+// }
+// ask(false,showOk,showCancel)
+// console.log("Вы согласны")
+
+// const arr=[{name:"Suzanne"},{name:"Jim"},{name:"Trevor"},{name:"Amanda"}]
+// console.log(arr)
+// console.log(arr.sort((a,b)=>a.name[1]<b.name[1]))
+
+// const arr=[1,2,3,4,5]
+// console.log(arr)
+// console.log(arr.reverse())
+// console.log(arr.sort())
+
+// const arr=new Array(5).fill("a")
+// console.log(arr)
+// console.log(arr.fill("b",2,4))
+// console.log(arr.fill("c",0,2))
+// console.log(arr.fill(5.5,-4,-1))
+
+// const arr=[1,5,7]
+// console.log(arr)
+// arr.splice(1,30,"4","8")
+// console.log(arr)
+// const arr=[0,1,2,3,4,5]
+// console.log(arr)
+// arr.copyWithin(2,3,-2)
+// console.log(arr)
+// arr.copyWithin(0,2,1)
+// console.log(arr)
+// arr.copyWithin()
+
+// const arr=[1,2,3,4,5]
+// a=arr.slice(3)
+// console.log(arr)
+// console.log(a)
+// console.log(arr)
+// s=
+// console.log(arr.slice(-4,1))
+// const arr=new Array(5)
+// console.log(arr.length)
+
+// const arr1=[1,2,3,["one","free"]]
+// console.log(arr1[3][1])
+// console.log(arr1.length[3])
+
+// const arr=new Array(5).fill("Z")
+// console.log(arr)
+// console.log(arr.fill("b",1))
+// x;
+// // let x=3;
+// var x=3
+// console.log(x)
+
+// const f=(function(){
+//     let count=0
+//     return function(){
+//         return `Меня вызвали ${++count} раз(а).`
+//     }
+// })()
+// console.log(f())
+// console.log(f())
+// console.log(f())
+// console.log(f())
+// console.log(f())
+
+// let f;
+// {
+//     let o={note:"Bezopacno"}
+//     f=function(){
+//         return o
+//     }
+// }
+// let oRef=f()
+// oRef.note="Ne covcem bezopacno"
+
+// let globalFunc
+// {
+//     let blockVar='a'
+//     globalFunc=function(){
+//         console.log(blockVar)
+//     }
+// }
+
+// globalFunc()
+
+// {
+//     let x={
+//         color:"blue"
+//     }
+//     let y=x
+//     let z=3
+//     {
+//         let x=5
+//         console.log(x)
+//         console.log(y.color)
+//         y.color="red"
+//         console.log(z)
+//     }
+//     console.log(x.color)
+//     console.log(y.color)
+//     console.log(z)
+// }
+
+
+// {
+//     let x="blue"
+//     console.log(x)
+//     {
+//         let x="3"
+//         console.log(x)
+//     }
+//     console.log(x)
+// }
+// console.log(x)
+
+// console.log("перед блоком")
+// {
+//     console.log("Vnutri bloka")
+//     constx=3
+//     console.log(x)
+// }
+// console.log(`za blokom x=${x}`)
+
+
+// let user={
+//     name:"Irena",
+//     age:25,
+// }
+
+
+// function greet(user){
+//     console.log(`Hello, ${user.name}`)
+// }
+// function getBirthYear(user){
+//     return console.log(new Date().getFullYear() - user.age)
+// }
+// greet(user)
+// getBirthYear(user)
+// console.log(getBirthYear(user))
+
+// const x=3
+// function f(){
+//     console.log(x);
+//     console.log(y);
+// }
+// const y=5
+// f()
+
+// const bruce = {name:"Bruce"};
+// const madeline = {name:"madeline"}
+
+// function update(birthYear,occupation,...one){
+//     this.birthYear=birthYear
+//     this.occupation=occupation
+//     this.one=one
+// }
+// update.call(bruce,234,"ZXC")
+// const updateBruce=update.bind(bruce)
+// console.log(bruce)
+// updateBruce.call(null,"ads","XXX")
+// console.log(bruce)
+// const up=update.bind(bruce,"1234","Indigo","Kilo")
+// up()
+// console.log(bruce)
+
+// const arr=[2,3,4,55,99,-7]
+// const rez=Math.max.apply(null,arr)
+// console.log(rez)
+// function greet(){
+//     return console.log(`ima- ${this.name}!!`)
+// }
+
+// const bruce = {name:"Bruce"};
+// const madeline = {name:"madeline"}
+
+// function update(birthYear,occupation,...one){
+//     this.birthYear=birthYear
+//     this.occupation=occupation
+//     this.one=one
+// }
+// console.log(bruce)
+// update.call(bruce,1949,"singer",1213,"asdsad","dfgeuwyfu,","asdwqd")
+// console.log(bruce)
+
+// function update1(birthYear1,...one){
+//     this.birthYear1=birthYear1
+//     // this.occupation1=occupation1
+//     this.one=one
+// }
+// console.log(bruce)
+// update1.call(bruce,[5,4,3,2,1],"Stroka",["ZAQ"],["XSW"])
+// console.log(bruce)
+
+
+// greet()
+// greet.call(bruce)
+// greet.call(madeline)
+
+// const  o = {
+//     name:"123456789",
+//     greetBackwards: function(){
+//         const getReverseName = ( )=> {
+//             let nameBackwards=""
+//             for(let i=this.name.length-1;i>=0;i--){
+//                 nameBackwards+=this.name[i]
+//             }
+//             return nameBackwards
+//         }
+//         return console.log(`${getReverseName()} si eman ym, olleH`)
+//     },
+// }
+// o.greetBackwards()
+
+// name="qwerty"
+// const o={
+//     name:"Jule",
+//     greetBackwards(){
+//         function getReverseName(){
+//             let nameBackwards=""
+//             for(let i=this.name.length-1;i>=0;i--){
+//                 nameBackwards+=this.name[i]
+//             }
+//             return nameBackwards
+//         }
+//         return `${getReverseName()} si eman ym, olleH`
+//     }
+// }
+// const name="qwerty"
+// const o={
+//     name:"abcde",
+//     greetBackwards(){
+//         const self=this
+//         function getReverseName(){
+//             let nameBackwards=""
+//             for(let i=self.name.length-1;i>=0;i--){
+//                 nameBackwards+=self.name[i]
+//             }
+//             return nameBackwards
+//         }
+//         return `${getReverseName()} si eman ym, olleH`
+//     }
+// }
+
+// console.log(o.greetBackwards());
+
+// const o={
+//     name:"Wallace",
+//     speak(){
+//         return console.log(`${this.name}!!! ASDFG`)
+//     }
+// }
+// console.log(o.name)
+// o.speak()
+
+// const speak=o.speak
+// speak === o.speak
+// speak()
+
+// const o={
+//     name:"Wallace",
+//     bark:function(){
+//         return console.log("Woof!!!")
+//     }
+// }
+// console.log(o.name)
+// o.bark()
+
+// const oo={
+//     name:"Wallace11",
+//     bark(){return "WOOOF!!!111"}
+// }
+// console.log(oo.name)
+// console.log(oo.bark())
+
+// function f(a,b="delta",c=100){
+//     return console.log(`${a} ${b} ${c}`)
+// }
+// f(5)
+
+// f()
+
+
+
+// function addPrefix(prefix,...w){
+//     const prefixedWords=[]
+//     for(let i=0;i<w.length;i++){
+//         prefixedWords[i]=w[i]
+//     }
+//     return prefixedWords
+// }
+// console.log(addPrefix("con","verse","vex"))
+// function getSen1([sub,ver,obj]){
+//     return `${sub} ${ver} ${obj}`;
+// }
+// const arr=["I","Love","JavaScript"];
+// console.log(getSen1(arr));
+
+// function getSentence({subject,verb,object}){
+//     return `${subject} ${verb} ${object}`
+// }
+
+// const o={
+//     subject:"I",
+//     verb:" love",
+//     object:"JavaScript"
+// }
+
+// console.log(getSentence(o))
+// function ff(x){
+//     return `Внутри f: x=${x}`;
+// }
+// console.log(ff())
+
+// function f(o){
+//     o.message="Изменено в f"
+//     o.message= "Новый обьект!"
+//     console.log(`Внутри o.message="${o.message}" (после присваивания)`)
+// }
+// let o={
+//     message:"Начальное значение"
+// }
+
+// console.log(`Перед вызовом f: o.message="${o.message}"`)
+// f(o)
+// console.log(`После вызова f: o.message="${o.message}"`)
+
+// function f(x){
+//     console.log(`Внутри f: x=${x}`)
+//     x=5
+//     console.log(`Внутри f: x=${x} (После присваивания)`)
+// }
+// let x=3
+// console.log(`Перед вызовом f: x=${x}`)
+// f(x)
+// console.log(`После вызовом f: x=${x}`)
+
+// function map(f, a) {
+//     var result = []; // Create a new Array
+//     var i; // Declare variable
+//     for (i = 0; i != a.length; i++)
+//       result[i] = f(a[i]);
+//         return result;
+//   }
+//   var f = function(x) {
+//      return x * x;
+//   }
+//   var numbers = [0, 1, 2, 5, 10];
+//   var cube = map(f,numbers);
+//   console.log(cube);
+
+// const arr=[1,2,3]
+// arr[1]=sayHello
+// arr[1]()
+
+// function sayHello(){
+//     return console.log("say")
+// }
+// // console.log(sayHello())
+// const x=sayHello
+// // console.log(x())
+// const o={}
+// o.z=x
+// o.b=123
+// console.log(o.z()[4])
+// console.log(o.b)
+// ty
+// typeof (o.z()[4])
+// const d=new Date();
+// console.log(d);
+// console.log(d.valueOf());
 
 // const book = [
 //     " Twinkle, twinkle, littlebat ! " ,
-    //     " How I wonder what you ' reat ! " ,
+//     " How I wonder what you ' reat ! " ,
 //     " Up above the world you fl y , " ,
 //     " Like а tea tray in the sky . " ,
 //     " Twinkl e , twinkle , little bat ! " ,
