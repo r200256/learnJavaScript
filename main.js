@@ -1,53 +1,146 @@
-var app6=new Vue({
-    el:'#app-6',
-    data:{
-        message:'Привет, Vue!!'
-    }
-})
-var app5=new Vue({
-    el:'#app-5',
-    data:{
-        message:'Привет, Vue.js!'
+// Vue.component('button-counter',{
+//     data:function(){
+//         return{
+//             count:0
+//         }
+//     },
+//     template:'<button v-on:click="count++">Счетчик кликов - {{count}}</button>'
+// })
+Vue.component('button-counter', {
+    data: function () {
+      return {
+        count: 0
+      }
     },
-    methods:{
-        reverseMessage:function(){
-            this.message=this.message.split('').reverse().join('')
-        }
-    }
-})
+    template: '<button v-on:click="count++">Счётчик кликов — {{ count }}</button>'
+  })
+// new Vue({el:'#component-demo'})
 
-var app4=new Vue({
-    el:'#app-4',
-    data:{
-        todos:[
-            {text:'Изучить JavaScript'},
-            {text:'Изучить Vue'},
-            {text:'Создать что нибудь класное'},
-            {text:'JavaScript'},
-            {text:'JavaScript'}
-        ]
-    }
-})
-var app3=new Vue({
-    el:'#app-3',
-    data:{
-        seen:true
-    }
-})
 
-var app2=new Vue({
-    el:"#app-2",
-    data:{
-        message:"DATE --> "+new Date().toLocaleString()
-    }
-})
+//     el: '#demo',
+// //     data: {
+//       show: true
+//     }
+//   })
 
-var appq= new Vue({
-    el:'#app',
-    data:{
-        message:'Привет, Vue!'
-    }
-})
+// new Vue({
+//     el: '#demo'{
+
+},
+//     data: {
+//       show: true
+//     }
+//   })
+
+// var vm= new Vue({
+//     el:'#app',
+//     data:{
+//         firstName:'Foo',
+//         lastName:'Bar',
+//         // fullName:'FOO BAR'
+//     },
+//     computed:{
+//         fullName:function(){
+//             return this.firstName+ '--'+this.lastName
+//         }
+//     }
+    // watch:{
+    //     firstName:function(val){
+    //         this.fullName=val+' '+this.lastName
+    //     },
+    //     lastName:function(val){
+    //         this.fullName=this.firstName+' '+val
+    //     }
+    // }
+// })
+
+// var app=new Vue({
+//     el:'#app',
+//     data:{
+//         message:'Lorem 2021'
+//     }
+// })
+
+// var app= new Vue({
+//     el:'#app',
+//     data:{
+//         message:'Привет, Vue!'
+//     }
+// })
+
+// var vu1=new Vue({
+//     data:{
+//         a:1
+//     },
+//     created:function(){
+//         console.log('Значение а: '+this.a)
+//     }
+// })
+// vu1.created();
+// Vue.component('todo-item',{
+//     props:['todo'],
+//     template:'<li>{{todo.text}}</li>'
+// })
+// var app7=new Vue({
+//     el:'#app-7',
+//     data:{
+//         groceryList:[
+//             {id:01,text:'Овощи'},
+//             {id:11,text:'Сыр'},
+//             {id:22,text:'Что там еще едят люди'},
+//         ]
+//     }
+// })
+// var app6=new Vue({
+//     el:'#app-6',
+//     data:{
+//         message:'Привет, Vue!!'
+//     }
+// })
+// var app5=new Vue({
+//     el:'#app-5',
+//     data:{
+//         message:'Привет, Vue.js!'
+//     },
+//     methods:{
+//         reverseMessage:function(){
+//             this.message=this.message.split('').reverse().join('')
+//         }
+//     }
+// })
+
+// var app4=new Vue({
+//     el:'#app-4',
+//     data:{
+//         todos:[
+//             {text:'Изучить JavaScript'},
+//             {text:'Изучить Vue'},
+//             {text:'Создать что нибудь класное'},
+//             {text:'JavaScript'},
+//             {text:'JavaScript'}
+//         ]
+//     }
+// })
+// var app3=new Vue({
+//     el:'#app-3',
+//     data:{
+//         seen:true
+//     }
+// })
+
+// var app2=new Vue({
+//     el:"#app-2",
+//     data:{
+//         message:"DATE --> "+new Date().toLocaleString()
+//     }
+// })
+
+// var appq= new Vue({
+//     el:'#app',
+//     data:{
+//         message:'Привет, Vue!'
+//     }
+// })
 
 // class CoffeeMachine {
 //     _waterAmount = 0;
@@ -976,56 +1069,56 @@ var appq= new Vue({
 //     {name:"name",z:"z"},
 //     {name:"name",z:"zz"},
 //     {name:"Jo",zh1:"h1"},
-//     {name:"Hi",zh2:"h2"},
-//     {name:"Fi",zh3:"h3"}
-// ];
+// //     {name:"Hi",zh2:"h2"},
+// //     {name:"Fi",zh3:"h3"}
+// // ];
 
-// const sam3={
-//     name:'Sam',
-//     classification:{
-//         kingdom:'Amalia',
-//         phylum:'Chortdata',
-//         class:'Mamalia',
-//         family:'Felidae',
-//         subfamily:'Felinae',
-//         genus:'Felis',
-//         species:'catus',
-//         speak:function(){return "Meow!"}
-//     },
-// };
+// // const sam3={
+// //     name:'Sam',
+// //     classification:{
+// //         kingdom:'Amalia',
+// //         phylum:'Chortdata',
+// //         class:'Mamalia',
+// //         family:'Felidae',
+// //         subfamily:'Felinae',
+// //         genus:'Felis',
+// //         species:'catus',
+// //         speak:function(){return "Meow!"}
+// //     },
+// // };
 
-$(document).ready(function(){
-    'use strict';
-    // console.log('main.js loaded');
-    paper.install(window);
-    paper.setup(document.getElementById('mainCanvas'));
-    // TODO
+// $(document).ready(function(){
+//     'use strict';
+//     // console.log('main.js loaded');
+//     paper.install(window);
+//     paper.setup(document.getElementById('mainCanvas'));
+//     // TODO
 
-    var c=Shape.Circle(200,200,80);
-    c.fillColor='Black';
-    var text=new PointText(200,200);
-    text.justification='center';
-    text.fillColor='white';
-    text.fontSize=20;
-    text.content='Hello world!'
+//     var c=Shape.Circle(200,200,80);
+//     c.fillColor='Black';
+//     var text=new PointText(200,200);
+//     text.justification='center';
+//     text.fillColor='white';
+//     text.fontSize=20;
+//     text.content='Hello world!'
 
-    var tool=new Tool();
-    tool.onMouseDown=function(event){
-        // var c=Shape.Circle(event.point.x,event.point.y,30)
-        var c=Shape.Circle(event.point,30);
-        c.fillColor='red';
-    }
+//     var tool=new Tool();
+//     tool.onMouseDown=function(event){
+//         // var c=Shape.Circle(event.point.x,event.point.y,30)
+//         var c=Shape.Circle(event.point,30);
+//         c.fillColor='red';
+//     }
 
-    // var c;
-    // for(var x=25;x<400;x+=50){
-    //     for(var y=25;y<400;y+=50){
-    //         c=Shape.Circle(x,y,20);
-    //         c.fillColor='orange'
-    //         }
-    //     }
+//     // var c;
+//     // for(var x=25;x<400;x+=50){
+//     //     for(var y=25;y<400;y+=50){
+//     //         c=Shape.Circle(x,y,20);
+//     //         c.fillColor='orange'
+//     //         }
+//     //     }
 
-    // var c=Shape.Circle(200,200,50);
-    // c.fillColor='orange'
+//     // var c=Shape.Circle(200,200,50);
+//     // c.fillColor='orange'
 
-    paper.view.draw();
-});
+//     paper.view.draw();
+// });
